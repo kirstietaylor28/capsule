@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+ {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Hat Project</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap and Font Awesome css-->
+    <!-- we use cdn but you can also include local files located in css directory-->
+    <!-- "{% static 'css/bootstrap.min.css'%}" -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Google fonts - Montserrat for headings, Raleway for copy-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <!-- owl carousel-->
+    <!-- "css/owl.carousel.css" -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.css' %}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{% static 'css/style.default.css' %}" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+  </head>
+  <body>
+
+<!-- ############################################################################ -->
+<!--                               TOPz BAR                                       -->
+<!-- ############################################################################ -->
+
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar__content row">
+          <div class="col-sm-3 col-sm-offset-1 hidden-xs">
+          <!--- THP LOGO -->
+          </div>
+          <div class="col-sm-4 topbar__logo"><a href="/"><img src="{% static 'img/thp.png' %}" alt="" class="topbar__logo__normal"><img src="img/logo-small.png" alt="" class="topbar__logo__small"></a></div>
+          <div class="col-sm-4 hidden-xs">
+            <div class="topbar__cart" style="margin-right: 50px;">
+                <a href="/shopping_cart" class="btn btn-transparent"><i class="fa fa-shopping-cart"></i><span>Shopping Cart</span></a>
+                <a href="/login" class="btn btn-transparent" >Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="topbar__cart" style="margin-right: 50px;">
+        <a href="#" class="btn btn-transparent"><i class="fa fa-shopping-cart" ></i><span>Shopping Cart</span></a>
+        <a href="/login" class="btn btn-transparent" >Login</a>
+
+
+    </div> -->
+
+    <!-- ############################################################################ -->
+<!--                               NAVz BAR                                       -->
+<!-- ############################################################################ -->
+      <div role="navigation" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target=".collapsed-search" class="navbar-toggle btn btn-transparent"><i class="fa fa-search"></i><span class="sr-only">Toggle navigation</span></button><a href="basket.html" class="navbar-toggle btn btn-transparent"><i class="fa fa-shopping-cart"></i><span class="hidden-xs">3 Items in cart</span></a>
+          <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggle btn btn-transparent"><i class="fa fa-align-justify"></i><span class="sr-only">Toggle navigation</span></button>
+        </div>
+        <div id="navigation" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/shop">Shop</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="collapsed-search collapse">
+          <form>
+            <div class="input-group">
+              <input type="text" placeholder="SEARCH" class="form-control"><span class="input-group-btn">
+                <button type="button" class="btn"><i class="fa fa-search"></i></button></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+
+    <footer class="footer">
+      <div class="footer__block">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-4">
+              <h4>Let's be Friends</h4>
+              <p class="social"><a href="#" data-animate-hover="pulse" class="external facebook"><i class="fa fa-facebook"></i></a><a href="#" data-animate-hover="pulse" class="external gplus"><i class="fa fa-google-plus"></i></a><a href="#" data-animate-hover="pulse" class="external twitter"><i class="fa fa-twitter"></i></a><a href="#" data-animate-hover="pulse" class="email"><i class="fa fa-envelope"></i></a></p>
+            </div>
+            <div class="col-md-4 col-sm-4">
+              <h4>News and Updates</h4>
+              <p>Sign up to get the latest on sales, new releases and more …</p>
+              <form class="footer__newsletter">
+                <div class="input-group">
+                  <input type="text" placeholder="Enter your email address" class="form-control"><span class="input-group-btn">
+                    <button type="button" class="btn btn-default"><i class="fa fa-send"></i></button></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>&copy;2017 The Hat Project</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Javascript files-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/front.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <!---->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-51713035-10');ga('send','pageview');
+    </script>
+</body>
+</html>

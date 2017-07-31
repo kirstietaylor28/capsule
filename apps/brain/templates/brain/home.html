@@ -1,0 +1,174 @@
+
+{% extends 'brain/base.html' %}
+{% block content %}
+{% load static %}
+
+
+    <!-- ############################################################################ -->
+    <!--                         INTROz IMG/TEXT/LINK                                 -->
+    <!-- ############################################################################ -->
+    <section id="intro" class="intro image-background" style="background-image: url('{% static "img/hero_img.jpg"%}')">
+      <!-- .overlay-->
+      <div class="content">
+        <div class="container clearfix">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-sm-12">
+              <h2>We are<br /><span class="h1">THE HAT PROJECT</span></h2>
+              <p>Born from a desire to use technology to help others, The Hat Project strives to finally fit a hat to your head instead of make your head fit a hat.  Using mathematical ratios that have been passed since the 13th century to produce some of the worlds greatest works of art, our hats will not only fit you perfectly but will be individually contoured to your unique characteristics.
+              </p><a href="/shop" class="btn btn-white scroll-to">Start shopping </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--- <span class="scroll-btn"><a href="#navigation" class="scroll-to"><span class="mouse"><span>              </span></span></a></span>-->
+    </section>
+
+
+
+<!-- ############################################################################ -->
+<!--                               VIDEOz                                         -->
+<!-- ############################################################################ -->
+    <div class="container">
+      <section>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h4>Video</h4>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" >
+            <div class="heading">
+            <a id="video" href=""><iframe width="560" height="315" src="https://www.youtube.com/embed/ZUG9qYTJMsI" frameborder="0" allowfullscreen></iframe></a>
+          </div>
+          <!--- <div class="col-sm-4"><a href="#" class="margin-bottom"><img src="img/promobox-item-2.jpg" alt="" class="img-responsive img-border"></a></div>
+          <div class="col-sm-4"><a href="#" class="margin-bottom"><img src="img/promobox-item-3.jpg" alt="" class="img-responsive img-border"></a></div> -->
+        </div>
+      </section>
+
+<!-- ############################################################################ -->
+<!--                               ABOUTz                                         -->
+<!-- ############################################################################ -->
+       <div style="background-image: url('{% static "img/3d.jpg"%}');" class="bar background-image-fixed color-white text-center">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="icon margin-bottom" style="color : black;"><i style="color : black;" class="fa fa-send"></i></div>
+            <h3 style="color : black;">Where technology meets custom apparel</h3>
+            <p style="color : black;">Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. </p>
+            <p> <a href="/shop" class="btn btn-white" style="color : black;">Shop Here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <section id="about">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-sm-12">
+            <div class="heading" name="about" >
+              <h4>About</h4>
+            </div>
+            <p>Our team of dedicated entrepreneurs have worked tirelessly to use technology to not only solve a problem we feel should not exist but try to inspire others to do the same.Using the camera on your smart phone or tablet our app apps the exact contours of your head.  Then our algorithm determines the exact proportions of each component so we can construct a perfectly fitting and ideally proportionate hat with mathematical exactness.  </p>
+          </div>
+        </div>
+      <section>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+
+
+<!-- ############################################################################ -->
+<!--                               Productz                                       -->
+<!-- ############################################################################ -->
+              <h4>Products</h4>
+            </div>
+          </div>
+        </div>
+        <div class="row products">
+          <div class="col-md-3 col-sm-6">
+            <div class="product">
+              <div class="image"><img src="{% static 'img/hat1.png' %}" alt="" class="img-responsive"></a>
+              </div>
+              <div class="text">
+                <h3> <a href="hat/1">Baseball Cap</a></h3>
+                <p class="price">$40            </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="product">
+              <div class="image"><img src="{% static 'img/hat2.png' %}" alt="" class="img-responsive"></a>
+              </div>
+              <div class="text">
+                <h3> <a href="hat/2">Trucker Hat</a></h3>
+                <p class="price">$40             </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="product">
+              <div class="image"><img src="{% static 'img/hat3.png' %}" alt="" class="img-responsive"></a>
+              </div>
+              <div class="text">
+                <h3> <a href="hat/3">Army Cap</a></h3>
+                <p class="price">$40             </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="product">
+              <div class="image"><img src="{% static 'img/hat4.png' %}" alt="" class="img-responsive"></a>
+              </div>
+              <div class="text">
+                <h3> <a href="hat/4">Five Panel Hat</a></h3>
+                <p class="price">$40             </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- quick view modal box-->
+
+<div id="product-quick-view-modal" tabindex="-1" role="dialog" aria-hidden="false" class="modal fade">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+              <div class="row quick-view product-main">
+                <div class="col-sm-6">
+                  <div class="quick-view-main-image"><img src="img/detailbig1.jpg" alt="" class="img-responsive"></div>
+                  <div class="ribbon ribbon-quick-view sale">
+                    <div class="theribbon">SALE</div>
+                    <div class="ribbon-background"></div>
+                  </div>
+                  <!-- /.ribbon-->
+                  <div class="ribbon ribbon-quick-view new">
+                    <div class="theribbon">NEW</div>
+                    <div class="ribbon-background"></div>
+                  </div>
+                  <!-- /.ribbon-->
+                  <div class="row thumbs">
+                    <div class="col-xs-4"><a href="img/detailbig1.jpg" class="thumb"><img src="img/detailsmall1.jpg" alt="" class="img-responsive"></a></div>
+                    <div class="col-xs-4"><a href="img/detailbig2.jpg" class="thumb"><img src="img/detailsmall2.jpg" alt="" class="img-responsive"></a></div>
+                    <div class="col-xs-4"><a href="img/detailbig3.jpg" class="thumb"><img src="img/detailsmall3.jpg" alt="" class="img-responsive"></a></div>
+                  </div>
+                </div>
+
+                  <!-- /.box-->
+                  <div class="quick-view-social">
+                    <h4>Show it to your friends</h4>
+                    <p><a href="#" data-animate-hover="pulse" class="external facebook"><i class="fa fa-facebook"></i></a><a href="#" data-animate-hover="pulse" class="external gplus"><i class="fa fa-google-plus"></i></a><a href="#" data-animate-hover="pulse" class="external twitter">
+                    <i class="fa fa-twitter"></i></a><a href="#" data-animate-hover="pulse" class="email"><i class="fa fa-envelope"></i></a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal-dialog-->
+      </div>
+      <!-- /.modal-->
+      <!-- /quick view modal box-->
+    </div>
+
+{% endblock %}

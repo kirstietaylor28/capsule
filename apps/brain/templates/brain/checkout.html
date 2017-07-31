@@ -1,0 +1,131 @@
+{% extends 'brain/base.html' %}
+{% block content %}
+{% load static %}
+    <div class="container">
+      <div class="row page-top">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h1>Checkout - Address</h1>
+        </div>
+      </div>
+      <div id="checkout" class="col-md-9">
+        <div class="box">
+          <form method="post" action="checkout2.html">
+            <ul class="nav nav-pills nav-justified">
+              <li class="active"><a href="1"><i class="fa fa-map-marker"></i><br>Address</a></li>
+              <li class="disabled"><a href="2"><i class="fa fa-truck"></i><br>Delivery Method/Payment</a></li>
+              <li class="disabled"><a href="4"><i class="fa fa-eye"></i><br>Order Review</a></li>
+            </ul>
+            <div class="content">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="firstname">Firstname</label>
+                    <input type="text" id="firstname" class="form-control">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="lastname">Lastname</label>
+                    <input type="text" id="lastname" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="Company">Company</label>
+                    <input type="text" id="Company" class="form-control">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="Street">Street</label>
+                    <input type="text" id="Street" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-md-3">
+                  <div class="form-group">
+                    <label for="City">City</label>
+                    <input type="text" id="City" class="form-control">
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="form-group">
+                    <label for="ZIP">ZIP</label>
+                    <input type="text" id="ZIP" class="form-control">
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="form-group">
+                    <label for="State">State</label>
+                    <input type="text" id="State" class="form-control">
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="form-group">
+                    <label for="Country">Country</label>
+                    <input type="text" id="Country" class="form-control">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="Telephone">Telephone</label>
+                    <input type="text" id="Telephone" class="form-control">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="text" id="Email" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-footer">
+              <div class="pull-left"><a href="/shopping_cart" class="btn btn-default"><i class="fa fa-chevron-left"></i>Back to basket</a></div>
+              <div class="pull-right">
+                <a href="/checkout/2" class="btn btn-primary"><i class="fa fa-chevron-right"></i><span>Continue to Delivery</span></a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div id="order-summary" class="box black-white">
+          <div class="box-header">
+            <h3>Order summary</h3>
+          </div>
+          <p class="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Order subtotal</td>
+                  <th>$446.00</th>
+                </tr>
+                <tr>
+                  <td>Shipping and handling</td>
+                  <th>$10.00</th>
+                </tr>
+                <tr>
+                  <td>Tax</td>
+                  <th>$0.00</th>
+                </tr>
+                <tr class="total">
+                  <td>Total</td>
+                  <th>$456.00</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+      <br />
+      <br />
+    </div>
+
+{% endblock %}

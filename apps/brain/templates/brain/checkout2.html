@@ -1,0 +1,79 @@
+{% extends 'brain/base.html' %}
+{% block content %}
+{% load static %}
+    <div class="container">
+      <div class="row page-top">
+        <div class="col-sm-6 col-sm-offset-3">
+          <h1>Checkout - Delivery method</h1>
+        </div>
+      </div>
+      <div id="checkout" class="col-md-9">
+        <div class="box">
+          <form method="post" action="checkout4.html">
+            <ul class="nav nav-pills nav-justified">
+              <li><a href="1"><i class="fa fa-map-marker"></i><br>Address</a></li>
+              <li class="active"><a href="#"><i class="fa fa-truck"></i><br>Delivery Method</a></li>
+              <li class="disabled"><a href="4"><i class="fa fa-eye"></i><br>Order Review</a></li>
+            </ul>
+            <div class="content clearfix">
+              <div class="col-sm-6">
+                <div class="box shipping-method">
+                  <h4>USPS Next Day</h4>
+                  <p>Get it the next day - fastest option possible.</p>
+                  <div class="box-footer text-center">
+                    <input type="radio" name="delivery" value="0">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="box shipping-method">
+                  <h4>USPS</h4>
+                  <p>3 to 5 Business Days</p>
+                  <div class="box-footer text-center">
+                    <input type="radio" name="delivery" value="1">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-footer">
+              <div class="pull-right">
+                <a href="/checkout/4" class="btn btn-primary"><i class="fa fa-chevron-right"></i><span>Continue to Payment</span></a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div id="order-summary" class="box black-white">
+          <div class="box-header">
+            <h3>Order summary</h3>
+          </div>
+          <p class="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Order subtotal</td>
+                  <th>$446.00</th>
+                </tr>
+                <tr>
+                  <td>Shipping and handling</td>
+                  <th>$10.00</th>
+                </tr>
+                <tr>
+                  <td>Tax</td>
+                  <th>$0.00</th>
+                </tr>
+                <tr class="total">
+                  <td>Total</td>
+                  <th>$456.00</th>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

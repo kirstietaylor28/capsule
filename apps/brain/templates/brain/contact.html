@@ -1,0 +1,17 @@
+{% extends 'brain/base.html' %}
+{% block content %}
+{% load static %}
+
+<!--form-->
+    <div class="row" style="text-align: center;">
+        <div class="col-sm-6 col-sm-offset-3">
+            <form role="form" action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+                <br>
+                <br>
+            </form>
+        </div>
+    </div>
+{% endblock %}

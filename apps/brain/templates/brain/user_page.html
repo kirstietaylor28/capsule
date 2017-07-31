@@ -1,0 +1,114 @@
+{% extends 'brain/base.html' %}
+{% block content %}
+{% load static %}
+
+    {% load staticfiles %}
+    
+    <div class="container" style="text-align: center;">
+    {% for item in user %}
+      <h1>Hello, {{ item.username }}</h1>
+        <div class="info" style="display: inline-block; text-align: center;">
+              <br>
+             <h4>Email :</h4> <p>{{ item.email }}</p>
+             <h4>Address :</h4> <p>{{ address }}</p>
+             <h4>City :</h4><p>{{ city }}</p>
+              <h4>State :</h4> <p>{{ state }}</p>
+             <h4>Zip Code :</h4><p> </p>
+             {% endfor %}
+            </div>
+            <div class="info" style="display: inline-block; margin-left: 80px;">            
+            {% for item in measurement %}
+            <table style="vertical-align: top;">
+            <h3>
+            <tr>
+              <th>Circumerence: </th>
+              <td>{{item.circumference}}</td>
+            </tr>
+            <tr>
+              <th><p>Diameter Length:</p></th>
+              <td>{{item.diameter_length}}</td>
+            </tr>
+            <tr>
+              <th>Diameter Width:</th>
+              <td>{{item.diameter_width}}</td>
+            </tr>
+            <tr>
+              <th>Side Height Front:</th>
+              <td>{{item.side_height_front}}</td>
+            </tr>
+            <tr>
+              <th>Side Height Middle: </th>
+              <td> {{item.side_height_middle}}</td>
+            </tr>
+            <tr>
+              <th>Side Height Back:</th>
+              <td>{{item.side_height_back}}</td>
+            </tr>
+            <tr>
+              <th>Front Height:</th>
+              <td>{{item.front_height}}</td>
+            </tr>
+            <tr>
+              <th>Brim Length:</th>
+              <td>{{item.brim_length}}</td>
+            </tr>
+            <tr>
+              <th>Brim Width:</th>
+              <td>{{item.brim_width}}</td>
+            </tr>
+            </table>
+            </h3>
+            {% endfor %}
+            </div>
+            </div>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+                <!-- product-->
+                  <div class="register-form" >
+                    </div>
+                    <div class="text">
+                       <fieldset>
+        <form style="text-align: center;" method="POST", action="/update_info/">
+        <h3>Enter/Update Measurements:</h3>
+        <br>
+        {% csrf_token %}
+          Circumference: <input type="text" id= "circumference" name="Circumference" </input><br><br>
+          Diameter Length: <input type="text" id= "diameter_length" name="Diameter_Length" </input><br><br>
+          Diameter Width: <input type="text" id= "diameter_width" name="Diameter_Width" </input><br><br>
+          Side Height Front: <input type="text" id= "side_height_front" name="Side_Height_Front" </input><br><br>
+          Side Height Middle: <input type="text" id= "side_height_middle" name="Side_Height_Middle" </input><br><br>
+          Side Height Back: <input type="text" id= "side_height_back" name="Side_Height_Back" </input><br><br>
+          Front Height: <input type="text" id= "front_height" name="Front_Height" </input><br><br>
+          Brim Length: <input type="text" id= "brim_length" name="Brim_Length" </input><br><br>
+          Brim Width: <input type="text" id= "brim_width" name="Brim_Width" </input><br><br>
+          <input type="submit" name="" value="Submit">
+        </form>
+        <br>
+        <br>
+      </fieldset>
+                    </div>
+                  </div>
+                </div>
+                <!-- /product-->
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal-dialog-->
+      </div>
+      <!-- /.modal-->
+      <!-- /quick view modal box-->
+    </div>
+  </div>
+  </div>
+  </section>
+  </div>
+{% endblock %}
